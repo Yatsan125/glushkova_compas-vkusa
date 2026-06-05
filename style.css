@@ -1,0 +1,563 @@
+/* ========== ПОДКЛЮЧЕНИЕ КАСТОМНЫХ ШРИФТОВ ========== */
+    /* ========== ПОДКЛЮЧЕНИЕ КАСТОМНЫХ ШРИФТОВ ========== */
+@font-face {
+  font-family: 'Brigadier Stencil';
+  src: url('https://assets.codepen.io/908810/Brigadier-Stencil.woff2') format('woff2'),
+       url('https://assets.codepen.io/908810/Brigadier-Stencil.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tupik';
+  src: url('https://assets.codepen.io/908810/Tupik.woff2') format('woff2'),
+       url('https://assets.codepen.io/908810/Tupik.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ========== RESET & БАЗОВЫЕ СТИЛИ ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, 'Segoe UI', 'Inter', 'Roboto', sans-serif;
+  background-color: #fcf6ed;
+  color: #2d2a24;
+  line-height: 1.4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ========== НАВИГАЦИЯ ========== */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0 16px;
+  border-bottom: 2px solid #dcccaa;
+  margin-bottom: 32px;
+}
+
+.logo {
+  font-family: 'Brigadier Stencil', cursive, sans-serif;
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #bc661f, #873e0f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  font-weight: 500;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #3b2a1f;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #c26a2b;
+}
+
+/* ========== ЗАГОЛОВОК ВТОРОЙ СТРАНИЦЫ ========== */
+.hero-second {
+  text-align: center;
+  margin: 40px 0 48px;
+}
+
+.hero-second h1 {
+  font-family: 'Brigadier Stencil', cursive, sans-serif;
+  font-size: 2.5rem;
+  background: linear-gradient(130deg, #b95c1c, #7c3a12);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: -0.3px;
+}
+
+/* ========== СЕКЦИИ ========== */
+.category-section {
+  background: transparent;
+  border-radius: 0;
+  padding: 24px 0;
+  margin: 20px 0;
+}
+
+/* Заголовки МЕРОПРИЯТИЯ и КАЛЕНДАРЬ — ЧЁРНЫЙ ЦВЕТ */
+.section-title-second {
+  font-family: 'Tupik', cursive, sans-serif;
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #000000;
+  border-left: 8px solid #dd882d;
+  padding-left: 18px;
+}
+
+/* ========== ФИЛЬТРЫ ========== */
+.filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 20px 0;
+  position: relative;
+}
+
+.filter-badge {
+  font-family: 'Tupik', cursive, sans-serif;
+  background: #efe1cf;
+  padding: 8px 18px;
+  border-radius: 40px;
+  font-weight: 500;
+  cursor: default;
+  transition: 0.2s;
+  color: #000000;
+  border: 1px solid #e2d9cc;
+}
+
+.filter-badge:hover {
+  background: #FFC424;
+}
+
+/* ========== КАЛЕНДАРЬ С ФОНОМ FFF2A7 ========== */
+.calendar {
+  background: #FFC424;
+  border-radius: 20px;
+  padding: 50px 30px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.weekday {
+  font-weight: 700;
+  color: #b35f1c;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.cal-day {
+  background: #ffffff;
+  padding: 8px 4px;
+  border-radius: 28px;
+  font-weight: 500;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.cal-day:hover {
+  background: #FFC424;
+}
+
+/* ========== БЛОКИ ДЛЯ ТУРЫ, ФЕСТИВАЛИ, ЭКСКУРСИИ и т.д. ========== */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.category-card {
+  background: #FFC424;
+  border-radius: 32px;
+  padding: 20px 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.category-card span {
+  font-family: 'Tupik', cursive, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+.category-card:hover {
+  background: #398ABD;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.category-card:hover span {
+  color: #FFC424;
+}
+
+/* ========== ДВЕ КОЛОНКИ ========== */
+.two-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 40px 0 20px;
+}
+
+.col {
+  flex: 1;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+
+/* ========== БЛОК ИНФОРМАЦИИ (БЕЛЫЙ ФОН, ЧЕРНЫЙ ШРИФТ) ========== */
+.info-block-white {
+  background: #FFFFFF;
+  border-radius: 40px;
+  padding: 28px 30px;
+  margin: 20px 0;
+}
+
+.info-text-white {
+  color: #000000;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+/* ========== БЛОК О НАС (ФОН 398ABD, ШРИФТ FFF2A7) ========== */
+.about-block-blue {
+  background: #398ABD;
+  border-radius: 40px;
+  padding: 28px 30px;
+  margin: 20px 0;
+}
+
+.about-text-blue {
+  color: #FFF2A7;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.about-title-blue {
+  font-family: 'Tupik', cursive, sans-serif;
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #FFF2A7;
+  border-left: 8px solid #FFC424;
+  padding-left: 18px;
+}
+
+/* ========== КАРУСЕЛЬ ДЛЯ БЛЮД (СЛАЙДЕР) ========== */
+.carousel-container {
+  position: relative;
+  margin: 30px 0;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  gap: 20px;
+}
+
+.carousel-slide {
+  flex: 0 0 calc(33.333% - 14px);
+  min-width: calc(33.333% - 14px);
+}
+
+.dish-card {
+  background: #fcf2e4;
+  padding: 20px;
+  border-radius: 28px;
+  height: 100%;
+  transition: all 0.2s;
+  border: 1px solid #e2d9cc;
+}
+
+.dish-card:hover {
+  transform: translateY(-5px);
+  background: #f7e8d6;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.dish-card .dish-name {
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #b65817;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.dish-card .dish-description {
+  font-size: 0.9rem;
+  color: #3a2c1d;
+  line-height: 1.4;
+}
+
+.dish-card .dish-placeholder {
+  width: 100%;
+  height: 140px;
+  background: #e8d9c8;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8b6b4d;
+  font-family: 'Tupik', cursive;
+  font-size: 0.9rem;
+  border: 1px dashed #c4b49f;
+}
+
+/* Кнопки навигации карусели */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #FFC424;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.carousel-btn:hover {
+  background: #398ABD;
+  color: white;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.carousel-btn-left {
+  left: -20px;
+}
+
+.carousel-btn-right {
+  right: -20px;
+}
+
+/* ========== ФОРМА ПОДПИСКИ С ФОНОМ FFF2A7 ========== */
+.newsletter {
+  background: #FFF2A7;
+  border-radius: 56px;
+  padding: 36px 30px;
+  margin: 40px 0 32px;
+  text-align: center;
+}
+
+.newsletter h3 {
+  font-family: 'Tupik', cursive, sans-serif;
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.news-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.news-form input {
+  padding: 14px 24px;
+  border-radius: 60px;
+  border: none;
+  width: 280px;
+  font-size: 1rem;
+  background: white;
+  outline: none;
+}
+
+.news-form input:focus {
+  box-shadow: 0 0 0 3px rgba(57, 138, 189, 0.3);
+}
+
+.news-form button {
+  background: #398ABD;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 60px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.news-form button:hover {
+  background: #398ABD;
+  transform: translateY(-2px);
+}
+
+/* ========== ФУТЕР ========== */
+.footer {
+  border-top: 2px solid #e0cfbc;
+  padding: 36px 0 44px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.contacts {
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.social-tag {
+  font-family: 'Tupik', cursive, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #398ABD;
+}
+
+/* ========== ОБЩИЕ УТИЛИТЫ ========== */
+a {
+  cursor: pointer;
+}
+
+.category-section, .col {
+  background: transparent !important;
+}
+
+/* ========== АДАПТИВНОСТЬ ========== */
+@media (max-width: 900px) {
+  .carousel-slide {
+    flex: 0 0 calc(50% - 10px);
+    min-width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 780px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  .hero-second h1 {
+    font-size: 1.8rem;
+  }
+  
+  .section-title-second {
+    font-size: 1.5rem;
+  }
+  
+  .navbar {
+    flex-direction: column;
+    gap: 14px;
+  }
+  
+  .two-columns {
+    flex-direction: column;
+  }
+  
+  .calendar {
+    padding: 20px;
+  }
+  
+  .calendar-grid {
+    gap: 5px;
+  }
+  
+  .cal-day {
+    font-size: 0.8rem;
+    padding: 5px 2px;
+  }
+  
+  .weekday {
+    font-size: 0.8rem;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+  }
+  
+  .category-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  .carousel-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+  }
+  
+  .carousel-btn-left {
+    left: 5px;
+  }
+  
+  .carousel-btn-right {
+    right: 5px;
+  }
+  
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 16px;
+    justify-content: center;
+  }
+  
+  .section-title-second {
+    font-size: 1.3rem;
+  }
+  
+  .hero-second h1 {
+    font-size: 1.4rem;
+  }
+  
+  .category-card span {
+    font-size: 1rem;
+  }
+  
+  .filter-badge {
+    padding: 6px 14px;
+    font-size: 0.85rem;
+  }
+  
+  .newsletter h3 {
+    font-size: 1.5rem;
+  }
+  
+  .social-tag {
+    font-size: 1rem;
+  }
+  
+  .about-title-blue {
+    font-size: 1.5rem;
+  }
+}
